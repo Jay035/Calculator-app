@@ -14,7 +14,7 @@ let temporaryResult = '';
 numbers.forEach(number => {
     number.addEventListener('click', (e)=>{
         displayTwo += e.target.innerText;
-        secondDisplay.innerText =  displayTwo;
+        secondDisplay.innerText = displayTwo;
     })
 })
 
@@ -23,5 +23,7 @@ operations.forEach(operation =>{
         displayOne += displayTwo + ' '  + e.target.innerText;
         firstDisplay.innerText = displayOne;
         secondDisplay.innerText = ' ';
+        
+        displayTwo = ' '
     })
 })
