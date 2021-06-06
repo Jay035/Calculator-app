@@ -20,16 +20,61 @@ numbers.forEach(number => {
     })
 })
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 
-=======
+// =======
 operations.forEach(operation =>{
     operation.addEventListener('click', (e)=>{
+        const operationName = e.target.innerText;
+        if(displayOne && displayTwo && lastOperation){
+            mathOperation()
+        }
+        else{
+            result = parseFloat(displayTwo)
+        }
         displayOne += displayTwo + ' '  + e.target.innerText;
         firstDisplay.innerText = displayOne;
         secondDisplay.innerText = ' ';
         
         displayTwo = ' '
+        clearVal(operationName);
+        lastOperation = operationName;
     })
 })
->>>>>>> 6638b8b8411a8c466dee63d8c2adc279ef3d4b7f
+
+function clearVal(){
+    secondDisplay.innerText = ' '
+    displayTwo = ' '
+    console.log(result)
+    temporaryDisplay.innerText = result;
+}
+
+function mathOperation(){
+if(lastOperation === 'x'){
+    result = parseFloat(result) * parseFloat(displayTwo);
+}
+else if (lastOperation === '+'){
+    result = parseFloat(result) + parseFloat(displayTwo);
+}
+else if (lastOperation === '-'){
+    result = parseFloat(result) - parseFloat(displayTwo);
+}
+else if (lastOperation === '/'){
+    result = parseFloat(result) / parseFloat(displayTwo);
+}
+}
+
+equal.addEventListener('click', (e)=>{
+if(!displayOne || !displayTwo) return;
+
+mathOperation();
+clearVal();
+secondDisplay.innerText = result;
+temporaryDisplay.innerText = ''
+displayTwo = result;
+firstDisplay.innerText = '';
+displayOne = ''
+
+})
+
+
