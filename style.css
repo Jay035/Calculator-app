@@ -60,20 +60,18 @@ p{
 }
 #toggle-section{
     background-color: hsl(223, 31%, 20%);
-    padding: 0 0 .2rem .4rem;
+    height: 20px;
     border-radius: 20px;
+    padding: 0 .3em;
 }
-.theme-toggle{
+#theme-toggle{
     background-color:hsl(6, 63%, 50%) ;
-   }
-#theme-toggle-one{
     padding: .5em;
     border-radius: 50%;
     border: none;
+    width: 10%;
 }
-#theme-toggle-two,#theme-toggle-three{
-    display: none;
-}
+
 #display{
     width: 100%;
     height: 105px;

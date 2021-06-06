@@ -9,7 +9,9 @@ const clearAll = document.querySelector('.all-clear');
 
 let displayOne = '';
 let displayTwo = '';
-let temporaryResult = '';
+let operator = '';
+let result = '';
+let lastOperation = '';
 
 numbers.forEach(number => {
     number.addEventListener('click', (e)=>{
@@ -20,8 +22,56 @@ numbers.forEach(number => {
 
 operations.forEach(operation =>{
     operation.addEventListener('click', (e)=>{
+        // if( operation && !number){
+        //     return;
+        // }
+        const operationName = e.target.innerText;
+        if(displayOne && displayTwo && lastOperation){
+            mathOperation()
+        }
+        else{
+            result = parseFloat(displayTwo)
+        }
         displayOne += displayTwo + ' '  + e.target.innerText;
         firstDisplay.innerText = displayOne;
-        secondDisplay.innerText = ' ';
+        clearVal(operationName);
+        lastOperation = operationName;
+
     })
 })
+
+function clearVal(){
+        secondDisplay.innerText = ' '
+        displayTwo = ' '
+        console.log(result)
+        temporaryDisplay.innerText = result;
+}
+
+function mathOperation(){
+    if(lastOperation === 'x'){
+        result = parseFloat(result) * parseFloat(displayTwo);
+    }
+    else if (lastOperation === '+'){
+        result = parseFloat(result) + parseFloat(displayTwo);
+    }
+    else if (lastOperation === '-'){
+        result = parseFloat(result) - parseFloat(displayTwo);
+    }
+    else if (lastOperation === '/'){
+        result = parseFloat(result) / parseFloat(displayTwo);
+    }
+}
+
+equal.addEventListener('click', (e)=>{
+    if(!displayOne || !displayTwo) return;
+    
+    mathOperation();
+    clearVal();
+    secondDisplay.innerText = result;
+    temporaryDisplay.innerText = ''
+    displayTwo = result;
+    firstDisplay.innerText = '';
+    displayOne = ''
+    
+})
+
