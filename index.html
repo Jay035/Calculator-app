@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="blue">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator app</title>
+    <title>Frontend Mentor | Calculator app</title>
+    <!-- <link rel="stylesheet" href="dark.css" media="(prefers-color"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
@@ -12,16 +13,25 @@
     <section class="body">
     <div class="calculator">
         <div class="calculator-top">
-            <h2>calc</h2>
+            <h2 class="white">calc</h2>
 
             <div id="toggle-switch">
-                <span>Theme</span>
+                <span class="white">Theme</span>
             <div class="top-right">
                 <div class="right" id="numbers">
-                <p>&nbsp; 1 &nbsp;  2 &nbsp; 3</p>
+                <p class="white">&nbsp; 1 &nbsp;  2 &nbsp; 3</p>
                 </div>
                 <div class="right" id="toggle-section">
-                    <div class="day" id="theme-toggle" style="position: relative;left:0px;top: 2px;" ></div>
+                    <input type="radio" id="toggleOne" class="toggleOne" name="theme" />
+                    <label for="toggleOne">1</label>
+
+                    <input type="radio" id="toggleTwo" class="toggleTwo" name="theme" />
+                    <label for="toggleTwo">2</label>
+
+                    <input type="radio" id="toggleThree" class="toggleThree" name="theme" />
+                    <label for="toggleThree">3</label>
+
+                    <div class="selector">&nbsp;</div>
                  </div>
             </div>
             </div>
