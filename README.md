@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/mobile-first-price-grid-using-html-and-sass-GudPlfMPl)
-- Live Site URL: [Add live site URL here](https://jay035.github.io/Calculator/)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/mobile-first-price-grid-using-html-and-sass-GudPlfMPl)
+- Live Site URL: [Live site URL here](https://jay035.github.io/Calculator/)
 
 ## My process
 
