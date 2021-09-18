@@ -60,9 +60,9 @@ I will continue to develop myself and use better methods in manipulation 0f DOM 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Jay035)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [CodexJay](https://www.your-site.com)
+- Frontend Mentor - [@Jay035](https://www.frontendmentor.io/profile/Jay035)
+- Twitter - [@Chibuike035](https://www.twitter.com/yourusername)
 
 ## Acknowledgments
 
